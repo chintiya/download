@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <div id="pesan" style="
+    text-align: center;
+">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            var url = "https://pastekan.com/Q1vw"; // url tujuan
+            var count = 0; // dalam detik
+            function countDown() {
+                if (count > 0) {
+                    count--;
+                    var waktu = count + 1;
+                    $('#pesan').html('File Kamu Akan Terdownload Otomatis Dalam <br/> <h3 style="text-align: center;"><strong>' + waktu + ' detik.</strong></h3>');
+                    setTimeout("countDown()", 1);
+                } else {
+                    window.location.href = url;
+                }
+            }
+            countDown();
+        </script>
+</body>
+</html> 
